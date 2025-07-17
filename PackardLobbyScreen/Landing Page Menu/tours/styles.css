@@ -1,0 +1,123 @@
+
+  /*Basic body style code*/
+  body {  
+    background-color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;  
+  } 
+  h1{
+    font-family: 'proxima-nova', sans-serif;
+    color: #f9423a;
+    text-align: right;
+    position: fixed;
+    top: 10px;
+    right: 50px;
+    font-size: 40px;
+  }
+  .pageChangeArrow{
+    position: fixed;
+    top: 40px;
+    left: 210px;
+    height: 40px;
+    width: 40px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  .pageChangeButton{
+    position: fixed;
+    top: 20px;
+    left: 70px;
+    height: 80px;
+    width: 120px;
+  }
+  /*Unique logo style as this logo is centered in the top left screen and is a Lehigh College of Engineering logo*/
+  .logo {  
+background-color: #502d0e;
+margin-left: 20px;
+height: 50px;
+width: auto;
+} 
+.firstNavLogo{
+background-color: #502d0e;
+margin-left: 225px;
+height: 50px;
+width: auto;
+}
+.secondNavLogo{
+background-color: #502d0e;
+margin-left: 0px;
+height: 50px;
+width: auto;
+}
+.thirdNavLogo{
+background-color: #502d0e;
+margin-left: 0px;
+height: 50px;
+width: auto;
+}
+.NavLogo{
+background-color: #502d0e;
+margin-left: 15px;
+height: 50px;
+width: auto;
+}
+.bottombar {
+background-color: #502d0e;
+overflow: hidden;
+position:fixed;
+padding: 10px 0;
+bottom: 0;
+left: 0;
+width: 100%;
+height:auto;
+}
+    .buttonRow{
+        background-color: white;
+        position:fixed;
+        padding: 10px 0;
+        width: 100%;
+        margin-left: 2%;
+        margin-top: 2% 
+    }
+    .buttonRowTop{
+        background-color: white;
+        position:fixed;
+        padding: 10px 0;
+        width: 100%;
+        margin-left: 2%;
+        margin-top: 10%;
+    }
+    .button{
+        height: 175px;
+        width: auto;
+        background-color: white;
+    }
+    .button2{
+        margin-left: 2%;
+        height: 175px;
+        width: auto;
+        background-color: white;
+    }
+  /*The division style code that splits the screen into quarters*/
+  div{
+    position: fixed;
+    width: 50%;
+    height: 50%;
+  }
+  /*top left corner div*/
+  #NW { 
+    top: 0;   left: 0; 
+  }
+  /*top right corner div*/
+  #NE {
+    top: 0;   left: 50%;
+  }
+  /*bottom left corner div*/
+  #SW { 
+    top: 50%; left: 0;
+  }
+  /*bottom right corner div*/
+  #SE { 
+    top: 50%; left: 50%; 
+  }

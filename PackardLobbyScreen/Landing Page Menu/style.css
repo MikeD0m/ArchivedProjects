@@ -1,0 +1,75 @@
+.button-container {    
+    display: flex;    
+    flex-direction: column; 
+    justify-content: center;    
+    align-items: center;    
+    height: 100vh;    
+  }    
+  .button {       
+    background-color: white;    
+    color: white;
+    cursor: pointer;
+    height: 300px;   
+    width: auto;   
+  }
+  button:hover{
+    box-shadow: 0 24px 48px 0 rgba(0,0,0,0.2), 0 18px 60px 0 rgba(0,0,0,0.19);
+    background-color: #d1a666;
+}
+  body {  
+    background-color: white;  
+  }  
+  .bottombar {
+    background-color: #502d0e;
+    overflow: hidden;
+    position: fixed;
+    padding: 10px 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .logo {  
+    background-color: #502d0e;
+    margin-left: 20px;
+    height: 50px;
+    width: auto;
+  } 
+  .firstNavLogo{
+    background-color: #502d0e;
+    margin-left: 225px;
+    height: 50px;
+    width: auto;
+  }
+  .secondNavLogo{
+    background-color: #502d0e;
+    margin-left: 0px;
+    height: 50px;
+    width: auto;
+  }
+  .thirdNavLogo{
+    background-color: #502d0e;
+    margin-left: 0px;
+    height: 50px;
+    width: auto;
+  }
+  .NavLogo{
+    background-color: #502d0e;
+    margin-left: 15px;
+    height: 50px;
+    width: auto;
+  }
+table{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: auto;
+}
+h1{
+  font-family: 'Helvetica', sans-serif;
+  color: #63b1dc;
+  text-align: right;
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  font-size: 50px;
+}

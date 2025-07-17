@@ -1,0 +1,207 @@
+<!DOCTYPE html>              
+<html lang="en">              
+  <head>              
+    <meta charset="UTF-8">              
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">              
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Mobile App Page</title>  
+    <link rel="icon" href="Assets/LehighMountainHawks.png">             
+    <!--CSS styling for page, fairly unique styling code that could be used in other pages-->      
+    <style>
+      /*Code to center the QR code on the bottem right of the screen*/  
+      .qr-code {  
+        margin-left: 25%; 
+        padding: 20px;   
+        width: 270px;   
+      }
+      /*Code to center the group photo, below the caption on the bottom left screen*/
+      .group-photo {
+        margin-left: 25%;
+        padding: 20px;
+        width: 270px;
+      }  
+      /*Basic body style code*/
+      body {  
+        background-color: white;
+        height: 100%;
+        margin: 0;
+        padding: 0;  
+      } 
+      /*Unique logo style as this logo is centered in the top left screen and is a Lehigh College of Engineering logo*/
+      .logo {  
+    background-color: #502d0e;
+    margin-left: 20px;
+    height: 50px;
+    width: auto;
+  } 
+  .firstNavLogo{
+    background-color: #502d0e;
+    margin-left: 225px;
+    height: 50px;
+    width: auto;
+  }
+  .secondNavLogo{
+    background-color: #502d0e;
+    margin-left: 0px;
+    height: 50px;
+    width: auto;
+  }
+  .thirdNavLogo{
+    background-color: #502d0e;
+    margin-left: 0px;
+    height: 50px;
+    width: auto;
+  }
+  .NavLogo{
+    background-color: #502d0e;
+    margin-left: 15px;
+    height: 50px;
+    width: auto;
+  }
+  .bottombar {
+    background-color: #502d0e;
+    overflow: hidden;
+    position:fixed;
+    padding: 10px 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+  }
+      /*Code for the first Caption in the top right screen*/
+      h1{
+        font-family: 'proxima-nova', sans-serif;
+        color:#6ba69e;
+        margin-left: 5%; 
+        margin-right: 5%;
+        font-size: 29px;
+        line-height: 45px;
+        /*Font size 25, proxima nova font*/
+        padding: 20px; 
+        margin-top:10%; 
+        text-align: left;
+      }
+      /*Code for the second caption in the bottom left screen, above the picture*/
+      h2{
+        font-family: 'proxima-nova', sans-serif;
+        color:#63b1dc;
+        margin-left: 5%; 
+        margin-right: 5%;
+        font-size: 20px;
+        line-height: 20px;
+        /*Font size 25, proxima nova font*/
+        padding: 10px; 
+        margin-top:0; 
+        text-align: left;
+      }
+      h3{
+        font-family: 'Helvetica', sans-serif;
+        color: #6ba69e;
+        text-align: right;
+        position: absolute;
+        top: 10px;
+        right: 100px;
+        font-size: 50px;
+        width: auto;
+        height: auto;
+      }
+      .mobileapp{
+        margin-left: 8%;
+        padding: 5px; 
+        margin-top: 10%;
+        float: left;
+        height: 200px;
+        width: auto;
+        max-width: 1000px;
+      }
+      .mobileScreenshots{
+        padding: 5px;
+        height: 200px;
+        width: auto;
+      }
+      .QRCODE{
+        margin-left: 20%;
+        padding: 5px;
+        height: 125px;
+        width: auto;
+      }
+      .QRCODEPOINTER{
+        padding: 5px;
+        margin-bottom: 2%;
+        height: 220px;
+        width: auto;
+      }
+      .TeamPhoto{
+        margin-left: 20%;
+        height:215px;
+        width: auto;
+      }
+      /*The division style code that splits the screen into quarters*/
+      div{
+        position: fixed;
+        width: 50%;
+        height: 50%;
+      }
+      /*top left corner div*/
+      #NW { 
+        top: 0;   left: 0; 
+      }
+      /*top right corner div*/
+      #NE {
+        top: 0;   left: 50%;
+      }
+      /*bottom left corner div*/
+      #SW { 
+        top: 50%; left: 0;
+      }
+      /*bottom right corner div*/
+      #SE { 
+        top: 50%; left: 50%; 
+      }
+
+    </style>  
+  </head>      
+  <link rel="icon" href="LehighMountainHawks.png">         
+  <body>  
+    <!--Main division for the screen-->
+    <div>    
+      <div id="NW">
+        <!--Top left screen, with PC Rossin college logo-->
+        <h1>Download the Lehigh Engineering App for more information about the P.C. Rossin College of Engineering at Lehigh University.</h1>
+      </div>
+      <div id="NE">
+        <!--Top right screen, with centered caption-->
+        <h3>Mobile App</h3>
+        <div class="mobileapp">
+          <img src="../Assets/mobile/MobileScreenshot1.png" alt="mobileScreenshots" class="mobileScreenshots"></img>
+          <img src="../Assets/mobile/MobileScreenshot2.png" alt="mobileScreenshots" class="mobileScreenshots"></img>
+          <img src="../Assets/mobile/MobileScreenshot3.png" alt="mobileScreenshots" class="mobileScreenshots"></img>
+        </div>
+      </div>
+      <div id="SE">
+        <!--Bottom right screen, with stylized QR code-->
+        <h2>This mobile app and lobby screen experience were designed by Lehigh Engineering students!</h2>
+        <img src="../Assets/mobile/TeamPhoto.JPG" alt="TeamPhoto" class="TeamPhoto">
+      </div>
+      <div id="SW">
+        <!--Bottom left screen with caption and group photo-->
+        <img src="../Assets/mobile/lehigh-capstone-tour-app.png" alt="QRCODE" class="QRCODE"></img>
+        <img src="../Assets/mobile/ArrowWithText.png" alt="QRCODEPOINTER" class="QRCODEPOINTER"></img>
+      </div>
+    </div> 
+    <div class="bottombar">
+      <a href="../index.html"><img src="../Assets/homepage/2.png" alt="Logo" class="logo"></a>
+      <a href="../index.html"><img src="../Assets/homepage/like-sub.png" alt="Logo" class="firstNavLogo"></a>
+      <a href="../index.html"><img src="../Assets/homepage/arrow.png" alt="Logo" class="secondNavLogo"></a>
+      <a href="../index.html"><img src="../Assets/homepage/3.png" alt="Logo" class="thirdNavLogo"></a>
+      <a href="../index.html"><img src="../Assets/homepage/4.png" alt="Logo" class="NavLogo"></a>
+      <a href="../index.html"><img src="../Assets/homepage/5.png" alt="Logo" class="NavLogo"></a>
+      <a href="../index.html"><img src="../Assets/homepage/6.png" alt="Logo" class="NavLogo"></a>
+      <a href="../index.html"><img src="../Assets/homepage/7.png" alt="Logo" class="NavLogo"></a>
+      <a href="../index.html"><img src="../Assets/homepage/8.png" alt="Logo" class="NavLogo"></a>
+      <a href="../index.html"><img src="../Assets/homepage/9.png" alt="Logo" class="NavLogo"></a>
+      <a href="../Map/workingmap.html"><img src="../Assets/homepage/mapIcon.png" alt="Logo" class="NavLogo"></a>
+    </div>   
+    <script src="coolcode.js"></script>              
+  </body>              
+</html>  

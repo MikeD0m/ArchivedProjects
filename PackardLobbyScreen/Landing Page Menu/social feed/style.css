@@ -1,0 +1,42 @@
+/*Styling for the tintup feed*/
+body{
+  /*Background color provided by Lehigh Styling Guide*/
+    background-color: #4B2913;
+    -ms-overflow-stle: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  .logo {  
+    background-color: #502d0e;
+    margin-left: 20px;
+    height: 50px;
+    width: auto;
+    } 
+    .NavBarText{
+      font-family: 'proxima-nova', sans-serif;
+      color: white;
+      text-align: right;
+      position: fixed;
+      top: 20px;
+      right: 70px;
+      font-size: 30px;
+    }
+    .NavBarQR{
+      background-color: #502d0e;
+      margin-left: 800px;
+      height: 50px;
+      width: auto;
+    }
+    .bottombar {
+    background-color: #502d0e;
+    overflow: hidden;
+    position:fixed;
+    padding: 10px 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    }

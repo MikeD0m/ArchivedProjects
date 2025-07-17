@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Refer to Video1.html for comments-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="242; url=index.html" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Video</title>
+    <style>
+
+        /* 
+            SOURCE:
+            The following was made with the help of google's API documentation. 
+            It can be found at https://developers.google.com/youtube/iframe_api_reference. 
+        */
+
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            overflow: hidden; /* Hide scrollbars */
+        }
+
+        iframe {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="player"></div>
+
+    <script>
+        // Loads youtube API code
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Creates the youtube player
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                /*
+                Youtube Video Title :  Lehigh Engineering Tours: Packard Lab
+                Uploaded            :  10/6/22
+                */
+                videoId: '_4CaqNYFVmY', //Video id
+                playerVars: {
+                    controls: 0, // Hide player controls
+                    modestbranding: 1, // Remove youtube logo
+                    loop: 1, // Loop the video
+                    mute: 0, // Mute the video
+                    fs: 1, // Show fullscreen button
+                },
+                events: {
+                    onReady: onPlayerReady,
+                    onStateChange: onPlayerStateChange
+              }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+        function onPlayerStateChange(event) {        
+            if(event.data === 0) {          
+                window.location.replace('index.html');
+            }
+        }
+    </script>
+</body>
+</html>

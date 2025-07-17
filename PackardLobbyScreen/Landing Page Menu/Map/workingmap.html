@@ -1,0 +1,143 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <style>  
+    /* Making map full screen */  
+    body, html {  
+      height: 100%;  
+      margin: 0;  
+      padding: 0;  
+    }  
+    /* Set the googleMap div to occupy the entire viewport */  
+    #googleMap {  
+      width: 100%;  
+      height: 100vh;  /* vh : viewport height */  
+    }  
+  </style>  
+</head>  
+<body>  
+  
+<div id="googleMap"></div>  
+  
+<script>  
+function myMap() {  
+  var mapProp = {  
+    center: new google.maps.LatLng(40.6079378, -75.3793814), /* Map centered at Lehigh University */  
+    zoom: 15,  
+  };  
+  var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);  
+    
+  /* Adding marker at specified location */  
+  var marker = new google.maps.Marker({  
+    position: {lat: 40.607678, lng: -75.378622},  //40.607678, -75.378622
+    map: map,  
+    title: 'Packard Lab'  
+  });  
+  var marker2 = new google.maps.Marker({  
+    position: {lat: 40.608512, lng: -75.379081},  //40.608512, -75.379081              
+    map: map,  
+    title: 'Steps'  
+  });  
+  var marker3 = new google.maps.Marker({  
+    position: {lat:40.6088278, lng: -75.3763155},  //40.6088278,-75.3763155
+    map: map,  
+    title: 'Whitaker Lab'  
+  });  
+  var marker4 = new google.maps.Marker({  
+    position: {lat:40.607634030690846, lng: -75.38157178073526},  //40.607634030690846, -75.38157178073526
+    map: map,  
+    title: 'Mohler Lab'  
+  });  
+
+  var marker5 = new google.maps.Marker({  
+    position: {lat:40.601689472427125, lng: -75.3592588887719}, //40.601689472427125, -75.3592588887719
+    map: map, 
+    title: 'Iacocca Hall'  
+  });
+
+  var marker6 = new google.maps.Marker({  
+    position: {lat:40.60074686836224, lng: -75.36214771461611},  //40.60074686836224, -75.36214771461611
+    map: map,  
+    title: 'Building C'  
+  });
+
+  var marker7 = new google.maps.Marker({  
+    position: {lat:40.60788147567579, lng: -75.37619285619552},  //40.60788147567579, -75.37619285619552
+    map: map,  
+    title: 'Fritz Lab'  
+  });
+
+  var marker8 = new google.maps.Marker({  
+    position: {lat:40.60953809556793, lng: -75.37622798039305 }, //40.60953809556793, -75.37622798039305 
+    map: map,  
+    title: 'HST Building'  
+  });
+
+
+  var markers = [  
+  {  
+    marker: marker,  
+    text: "Packard Lab is the central hub for Engineering at Lehigh. It houses the MechE, ECE, and CSE departments as well."
+  },  
+  {  
+    marker: marker2,  
+    text: "The STEPS building houses several introductory and secondary Chemistry and Biology labs, as well as the EES and CEE department."
+
+
+  },  
+  {  
+    marker: marker3,  
+    text: "Whitaker Lab houses the MSE department and has several offices, classrooms, and labs used for various engineering courses."
+  },  
+  {  
+    marker: marker4,  
+    text: "Mohler Lab houses the ISE department as well as the Institue for Robotics. Fun fact: Mohler Lab was built as a Jewish synagogue in 1924."
+  },  
+  {  
+    marker: marker5,  
+    text: "Iacocca Hall, located on the Mountaintop Campus, is home to the College of Education as well as the Chemistry Engineering and Biological Sciences departments."
+  },  
+  {  
+    marker: marker6,  
+    text: "Building C, originally of Bethlehem Steel, is on the Mountaintop Campus and houses the Art, Architecture, Design departemnts."
+  },  
+  {  
+    marker: marker7,  
+    text: "Fritz Lab features 800,000 lb and 5,000,000 lb universal testing machines, and a dynamic test bed with broad fatigue-testing capabilities, and a wide range of instrumentation."
+  },  
+  {  
+    marker: marker8,  
+    text: "The HST building, opened in Spring 2022, is the largest building Lehigh has ever built. It houses the College of Health."
+  }  
+];  
+  
+// Add event listeners to each marker  
+markers.forEach(function(item) {  
+  var marker = item.marker;  
+  var text = item.text;  
+  
+  marker.addListener('mouseover', function() {  
+    var infoWindow = new google.maps.InfoWindow({  
+      content: text  
+    });  
+    infoWindow.open(map, marker);  
+  });  
+  
+  marker.addListener('mouseout', function() {  
+    infoWindow.close();  
+  });  
+});  
+
+
+}  
+
+
+</script>  
+  
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ8IGZit1DiCKK3hZaK9uorNw4YIWOVac&callback=myMap"></script>  
+  
+  
+<div id="_MI_404002f8e7b008131b04b639a6c1887d" style="position: absolute; top: 0; right: 0;"><a href="https://meteotrend.com/">Weather</a></div> <script type='text/javascript'>(function(d,w,t,k){function l(){if(typeof(w._MIOB_)=='undefined'){w._MIOB_={};}var m=w._MIOB_[t]=k;var s=d.createElement('script');m.p=('https:'==d.location.protocol?'https:':'http:');s.type='text/javascript';s.async=true;s.src=m.p+'//info.meteotrend.com/mt/'+m.t+'.js';d.body.appendChild(s);}if(d.readyState=='complete')l();else{if(w.attachEvent)w.attachEvent('onload',l);else w.addEventListener('load',l,false);}})(document,window,'404002f8e7b008131b04b639a6c1887d',{t:'4x6',sw:{"pname":1,"ccond":1,"ccdesc":1,"dayblock":1,"tblank":1},css:['{p}//info.meteotrend.com/mt/{t}.css','{p}//info.meteotrend.com/cs/9022fba1231a399f03e8e57a1c97f88c3b6f38bd.css'],source:'meteotrend'});</script>  
+  
+</body>  
+</html>
